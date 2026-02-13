@@ -26,7 +26,7 @@ export default function Navbar() {
     ]
 
     return (
-        <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        <nav className={`fixed top-0 w-full  md:w-full lg:w-full z-50 transition-all duration-300 ${
             scrolled ? 'bg-gray-900/90 backdrop-blur-lg shadow-lg shadow-purple-500/10' : 'bg-transparent'
         }`}>
             <div className="w-full relative mx-auto px-2 lg:px-8">
@@ -71,26 +71,34 @@ export default function Navbar() {
                                 </div>
                         </Link>
                     </div> */}
-                    {/* <div className="md:hidden relative w-13 h-12 text-gray-300 bg-gradient-to-br from-green-500 to-black
-                    border-2 flex items-center justify-center">
-                        <span className="">Schedule a meeting</span>
-                    </div> */}
-
-                    <div className="md:hidden max-w-7xl flex ">
-                        <div className="relative h-12 p-2 mb-1 border-2 border-white/10 ">
-                            <span className="">
-                                <p className="pt-">Schedule a meeting</p>
-                            </span>
-                        </div>
-                    </div>
+                
 
 
                     {/* mobile menu button */}
+
+                        <div className="md:hidden relative flex items-center gap-5 ">
+                        <Link
+                            href="/contact"
+                            className='relative px-4 py-2 bg-gradient-to-r from-green-500 to-black text-white front-semibold rounded-xl overflow-hidden group hover:from-pink-400'>
+                                <span className="relative  z-10">Get in Touch</span>
+                                {/* shinning effect */}
+                                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-transparent translate-x-[-100%] group-hover:translate-x-[-100%] transition duration-700">
+            
+                                </div>
+                        </Link>
+
                         <button onClick={() => setIsOpen(!isOpen)} 
                             className='md:hidden relative w-10 h-10 text-gray-300 hover:text-white transition-colors focus:outline-none'
                             aria-label='Toggle menu'>
-                                {isOpen ? <X size={24} /> : <Menu size={24}/>}
+                                {isOpen ? <X size={22} /> : <Menu size={22}/>}
                         </button>
+                    </div>
+                    
+                        {/* <button onClick={() => setIsOpen(!isOpen)} 
+                            className='md:hidden relative w-10 h-10 text-gray-300 hover:text-white transition-colors focus:outline-none'
+                            aria-label='Toggle menu'>
+                                {isOpen ? <X size={24} /> : <Menu size={24}/>}
+                        </button> */}
                 </div>
             </div>
 

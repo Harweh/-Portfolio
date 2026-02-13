@@ -10,14 +10,14 @@ import { SlSocialTwitter } from 'react-icons/sl';
 
 export default function Home() {
     return (
-        <div className="max-h-screen bg-gradient-to-br from-gray-900 via-gray-900/20 to-grey-900 relative overflow-hidden pt-140">
+        <div className="max-h-screen bg-gradient-to-br from-gray-900 via-gray-900/20 to-grey-900 relative overflow-hidden pt-110 md:pt-110 lg:pt-115">
 
             {/* Main Content */}
-            <div className="relative z-10 flex item-center justify-center min-h-screen px-4 pt-20">
-                <div className="max-w-5xl w-full text-center space-y-8 pt-80">
+            <div className="relative z-10 flex item-center justify-center min-h-screen px-4 pt-4 md:pt-18 lg:pt-20 py-8 ">
+                <div className="max-w-5xl w-full text-center space-y-8 ">
 
                     {/* welcome Badge */}
-                    <div className="inline-flex items-center justify-center  gap-4 px-6 py-2 bg-white/5 backdrop-blur-lg border border-white/10 rounded-full text-sm text-gray-300 mb-8 animate-fade-in">
+                    <div className="inline-flex items-center justify-center gap-4 px-4 md:px-6 lg:px-8 py-3 md:py-4 lg:py-4  bg-white/5 backdrop-blur-lg border border-white/10 rounded-full text-sm text-gray-300 mb-8 animate-fade-in">
                         <Sparkles className="w-4 h-4 text-green-400" />
                         <span>Welcome to my portfolio</span>
                     </div>
@@ -32,12 +32,12 @@ export default function Home() {
                     <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed animate-faded-in-up animation-delay-200">
                         <span className=" bg-gradient-to-r from-green-400 to-black-400 to-green-400 bg-clip-text text-transparent"> Full-stack developer </span> 
                         crafting beautiful, functional web applications with
-                        modern technologies and creative solutions. <br />
+                        modern technologies and creative solutions.
 
                     </p>
 
                     {/* feature tags */}
-                    <div className="flex flex-wrap justify-center gap-5 pt-4 animate-fade-in-up animation-delay-400">
+                    <div className="flex flex-wrap justify-center gap-3 md:gap-4 lg:gap-5 pt-2 md:pt-4 lg:pt-4 animate-fade-in-up animation-delay-400">
 
                         <div className="dlex items-center gap-2 px-4 py-2 bg-purple-500/10 border-pink-500/20 rounded-lg">
                             <Code className="w-5 h-5 text-blue-400" />
@@ -59,9 +59,9 @@ export default function Home() {
                             <a href="https://"
                             target="_blank"
                             rel="noonpener noreferrer"
-                            className="text-black-500 hover:text-gray-500 transition-colors"
+                            className="text-black-500 hover:text-black transition-colors"
                             >
-                                <SiGithub size={20} className='text-black' />
+                                <SiGithub size={15} className='text-white' />
                             </a>
 
                             <a href="https://"

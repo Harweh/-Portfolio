@@ -40,7 +40,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
             return 'Message must be at least 10 characters';
         }
         // Message cannot exceed 1000 characters
-        if (data.message.trim().length > 1000) {
+        if (data.message.trim()) {
             return 'Message must be less than 1000 characters';
         }
         // If everything passes, return null (no error)

@@ -157,15 +157,15 @@ type FormStatus = 'idle' | 'loading' | 'success' | 'error';
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-900 to-grey-900">
 
-            <div className="relative z-10 max-w-7xl mx-auto px-4 pt-100 pb-0">
+            <div className="relative z-10 max-w-7xl mx-auto px-12 md:px-6 lg:px-2 pt-23 md:pt-25 lg:pt-100">
 
                     {/* Page Header */}
-                    <div className="text-center mt-16 space-y-6">
+                    <div className="text-center mt-16 md:mt-18 lg:mt-25  space-y-6">
                         <h1 className="text-5xl md:text-7xl font-bold text-white">
                             Contact Me 
                             {/* <span className=" bg-gradient-to-r from-purple-500 via-pink-500 to-green-500 bg-clip-text text-transparent">Touch</span> */}
                         </h1>
-                        <p className="pb-16 text-xl text-gray-400 max-w-2xl mx-auto">
+                        <p className="pb-14 text-xl text-gray-400 max-w-2xl mx-auto">
                             Have a project in mind? I'd love to hear about it. Let's create something amazing together!
                         </p>
                     </div>
@@ -174,14 +174,14 @@ type FormStatus = 'idle' | 'loading' | 'success' | 'error';
 
                         {/* LEFT SIDE - Contact Info */}
 
-                            <div className="space-y-6">
+                        <div className="space-y-6  px-8 md: lg:px-0 ">
                                 {/* Info Cards */}
                                 <div className="space-y-6">
                                 {/* Email Card */}
-                                <div className="p-6 bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl hover:bg-white/10 transition-all group">
+                                <div className="p-4 sm:p-3 md:p-6 lg:p-6 bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl hover:bg-white/10 transition-all group">
                                     <div className="flex items-center gap-4">
                                         <div className="w-12 h-12 bg-gradient-to-br from-500 to-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                                            <Mail className="text-green-500" size={22} />
+                                            <Mail className="text-green-500" size={24} />
                                         </div>
                                     <div>
                                         <h3 className="text-white font-semibold">Email</h3>
@@ -191,10 +191,10 @@ type FormStatus = 'idle' | 'loading' | 'success' | 'error';
                             </div>
 
                                 {/* Phone Card */}
-                                <div className="p-6 bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl hover:bg-white/10 transition-all group">
+                                <div className="p-4 sm:p-3 md:p-6 lg:p-6 bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl hover:bg-white/10 transition-all group">
                                     <div className="flex items-center gap-4">
                                     <div className="w-12 h-12 bg-gradient-to-br from--500 to--500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                                        <Phone className="text-green-500" size={22} />
+                                        <Phone className="text-green-500" size={24} />
                                     </div>
                                     <div>
                                         <h3 className="text-white font-semibold">Phone</h3>
@@ -204,10 +204,10 @@ type FormStatus = 'idle' | 'loading' | 'success' | 'error';
                                 </div>
 
                                 {/* Location Card */}
-                                <div className="p-6 bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl hover:bg-white/10 transition-all group">
+                                <div className="p-4 sm:p-3 md:p-6 lg:p-6 bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl hover:bg-white/10 transition-all group">
                                     <div className="flex items-center gap-4">
                                     <div className="w-12 h-12 bg-gradient-to-br from--500 to--500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                                        <MapPin className="text-green-500" size={22} />
+                                        <MapPin className="text-green-500" size={24} />
                                     </div>
                                     <div>
                                         <h3 className="text-white font-semibold">Location</h3>
@@ -218,7 +218,7 @@ type FormStatus = 'idle' | 'loading' | 'success' | 'error';
                                 </div>
 
                                 {/* Available Badge */}
-                                <div className="p-6 bg-gray-500/10 border-2 border-white/10 border-green-500 rounded-3xl">
+                                <div className="p-6 sm:p-3 md:p-6 lg:p-6 bg-gray-500/10 border-2 border-white/10 border-green-500 rounded-3xl">
                                 <div className="flex items-center justify-center gap-3">
                                     <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
                                     <p className="text-green-400 font-semibold">Available for freelance work</p>
@@ -227,7 +227,7 @@ type FormStatus = 'idle' | 'loading' | 'success' | 'error';
                         </div>
 
                         {/* RIGHT SIDE - Contact Form */}
-                        <div className="p-8 bg-white/  border-0 border-white/10 rounded-xl">
+                        <div className="p-8.5 lg:p-1 bg-white/ border-0 border-white/10 rounded-xl">
                             {/* Error Banner */}
                             {status === 'error' && (
                             <div className="mb-10 p-4 bg-red-500/ border-2 border-white/10 border-red-500/ rounded-xl flex items-center gap-3">
@@ -251,7 +251,7 @@ type FormStatus = 'idle' | 'loading' | 'success' | 'error';
                                 placeholder="Name"
                                 className={`w-full px-4 py-3 bg-white/5 border ${
                                     fieldErrors.name ? 'border-red-500' : 'border-white/10'
-                                } rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition-colors`}
+                                } rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-green-500 transition-colors`}
                                 />
                                 {/* Field Error Message */}
                                 {fieldErrors.name && (
@@ -273,7 +273,7 @@ type FormStatus = 'idle' | 'loading' | 'success' | 'error';
                                 placeholder="Email"
                                 className={`w-full px-4 py-3 bg-white/5 border ${
                                     fieldErrors.email ? 'border-red-500' : 'border-white/10'
-                                } rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition-colors`}
+                                } rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-green-500 transition-colors`}
                                 />
                                 {fieldErrors.email && (
                                 <p className="mt-1 text-sm text-red-400">{fieldErrors.email}</p>
@@ -294,7 +294,7 @@ type FormStatus = 'idle' | 'loading' | 'success' | 'error';
                                 placeholder="Project Inquiry"
                                 className={`w-full px-4 py-3 bg-white/5 border ${
                                     fieldErrors.subject ? 'border-red-500' : 'border-white/10'
-                                } rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition-colors`}
+                                } rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-green-500 transition-colors`}
                                 />
                                 {fieldErrors.subject && (
                                 <p className="mt-1 text-sm text-red-400">{fieldErrors.subject}</p>
@@ -308,7 +308,7 @@ type FormStatus = 'idle' | 'loading' | 'success' | 'error';
                                     Message
                                 </label>
                                 {/* Character Counter */}
-                                <span className={`text-sm ${formData.message.length > 1000 ? 'text-red-400' : 'text-gray-500'}`}>
+                                <span className={`text-sm ${formData.message.length > 1000 ? 'text-amber-700' : 'text-gray-500'}`}>
                                     {formData.message.length}/1000
                                 </span>
                                 </div>
@@ -321,7 +321,7 @@ type FormStatus = 'idle' | 'loading' | 'success' | 'error';
                                 rows={5}
                                 className={`w-full px-4 py-3 bg-white/5 border ${
                                     fieldErrors.message ? 'border-red-500' : 'border-white/10'
-                                } rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition-colors resize-none`}
+                                } rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-green-500 transition-colors resize-none`}
                                 />
                                 {fieldErrors.message && (
                                 <p className="mt-1 text-sm text-red-400">{fieldErrors.message}</p>
@@ -332,9 +332,9 @@ type FormStatus = 'idle' | 'loading' | 'success' | 'error';
                             <button
                                 type="submit"
                                 disabled={status === 'loading'}
-                                className="w-full px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl overflow-hidden group disabled:opacity-70 disabled:cursor-not-allowed hover:scale-105 transition-all"
+                                className="w-full px-8 py-4 bg-gradient-to-r from-green-600 via-black to-green-700/90  text-white font-semibold rounded-xl overflow-hidden group disabled:opacity-70 disabled:cursor-not-allowed hover:scale-105 transition-all"
                             >
-                                <span className="relative z-10 flex items-center justify-center gap-2">
+                                <span className="relative z-50 flex items-center justify-center gap-2">
                                 {status === 'loading' ? (
                                     <>
                                     <Loader2 className="animate-spin" size={20} />
@@ -342,7 +342,7 @@ type FormStatus = 'idle' | 'loading' | 'success' | 'error';
                                     </>
                                 ) : (
                                     <>
-                                    <Send size={20} />
+                                    <Send size={16} />
                                     Send Message
                                     </>
                                 )}
